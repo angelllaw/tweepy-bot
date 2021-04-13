@@ -41,7 +41,7 @@ except:
 
 #opens stream and filters for friend's tweets
 followers = []
-for i in api.followers_ids("dangitty", stringify_ids = True):
+for i in api.followers_ids("TWITTER_HANDLE", stringify_ids = True):
     followers.append(i)
 
 tweets_listener = MyStreamListener(api)
