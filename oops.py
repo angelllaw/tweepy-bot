@@ -8,7 +8,7 @@ class MyStreamListener(tweepy.StreamListener):
         self.me = api.me()
 
     def on_status(self, tweet):
-        if tweet.author.id != 799767920117161984:
+        if tweet.author.id != YOUR_ID:
             print(f"{tweet.user.name}:{tweet.text}")
             api.create_favorite(tweet.id)
             author = tweet.author.screen_name
